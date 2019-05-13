@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  root "static_pages#home" #will make index page to be the root
+  get "/about", to: "static_pages#about"
+
+  resources :pages #will create all CRUD actions 
 end
